@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1562076355-923b545365b6?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg3OHwwfDF8c2VhY3J8MHx8ZGlhYmV0ZXMlMkN8ZW58MHx8fHwxNjc3MTE1MjQ5&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 36px;
+            color: #ffffff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+            display: inline-block;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+        }
+
+        input[type="number"] {
+            font-size: 16px;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #f0f8ff; /* Light blue background for input fields */
+            border: 1px solid #ffcc00; /* Golden border for contrast */
+            border-radius: 8px;
+            color: #333;
+            width: 100%;
+        }
+
+        button {
+            background-color: #ff6347; /* Tomato red color for the button */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e55347; /* Slightly darker red for hover effect */
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+            color: #f0f8ff;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff6347; /* Tomato red color for hover effect on the link */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/diabetes" method="post">
+        <label for="pregnancies">Number of Pregnancies:</label>
+        <input type="number" id="pregnancies" name="pregnancies" step="1" required>
+        <br><br>
+
+        <label for="glucose">Glucose Level (mg/dL):</label>
+        <input type="number" id="glucose" name="glucose" step="0.1" required>
+        <br><br>
+
+        <label for="bloodPressure">Blood Pressure (mm Hg):</label>
+        <input type="number" id="bloodPressure" name="bloodPressure" step="0.1" required>
+        <br><br>
+
+        <label for="skinThickness">Skin Thickness (mm):</label>
+        <input type="number" id="skinThickness" name="skinThickness" step="0.1" required>
+        <br><br>
+
+        <label for="insulin">Insulin Level (IU/mL):</label>
+        <input type="number" id="insulin" name="insulin" step="0.1" required>
+        <br><br>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" step="0.1" required>
+        <br><br>
+
+        <label for="height">Height (m):</label>
+        <input type="number" id="height" name="height" step="0.01" required>
+        <br><br>
+
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" name="age" step="1" required>
+        <br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <a href="/">Return to Main Menu</a>
+</body>
+</html>
